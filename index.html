@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html>  
+    <head>
+        <title>Sticks and Stones</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+      <script type="text/javascript"src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+ </script>   
+      <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"> 
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">      
+</head>   
+<body>         
+   
+   <script type="text/javascript" src="script.js"></script> 
+<strong><p>Sticks and Stones</p></strong>     
+<p id = "subtitle">click to continue</p>  
+    
+<div id = "playSingle" class = "menu" title = "Play by Yourself!"></div>   
+<div id = "playMulti" class = "menu" title = "Multiplayer!"></div>  
+<div id = "playVersus" class = "menu" title = "Play with your friends or the Computer! Note: to play against the computer, click Options"></div>
+<div id = "options" class = "menu" title = "Various different options to improve gameplay"></div>   
+   
+<h1 id = "main">Main Menu</h1>   
+
+<h1 id = "singlePlayer" class = "main-text" title = "Play by Yourself!">Single Player</h1>
+<h1 id = "multiPlayer" title = "Multiplayer!"class = "main-text" >Multiplayer</h1> 
+<h1 id = "versus" class = "menu2"  title = "Play with your friends or the Computer, Note: to play against the computer, click Options" >Versus</h1>
+<h1 id = "op" class = "menu2" title = "Various different options to improve gameplay!" >Options</h1> 
+       <canvas id="canvas" width="900" height="700">Your browser does not support the canvas element</canvas>
+  
+  <h1 id = "opt">Options</h1>   
+      <div id = "slider" title = "Background Music!"></div>
+      <div id = "slider2" title = "Sound effects!"></div>
+     
+      <div id = "back" class = "menu" title = "Go back!">Back</div> 
+<div id="red" title = "red"></div>
+<div id="green" title = "green"></div> 
+<div id="blue" title = "blue"></div>  
+  
+<div id="swatch" title = "Swatch" class="ui-widget-content ui-corner-all"></div> 
+<input id = "human-player" type = "radio" title = "Human Player" checked ><span id = "hp" title = "Human Player">Human Player</span> 
+
+<input id = "cpu" type = "radio" title = "Computer"><span id = "c" title = "Computer">AI</span>
+ 
+<h2 id = "colorpicker" title = "Edit the color of the particles in the Main Menu!">Colorpicker</h2>
+ 
+<div id = "mm" class = "afterscreen" title = "return to the main menu">Main Menu</div>
+<div id = "replay" class = "afterscreen" title = "replay the game">Replay</div> 
+
+<h1 id = "vol-opt-list">Volume</h1> 
+<h1 id = "versus-mode">Versus</h1> 
+<ul id = "options-list"> 
+        <li class="volume" title = "Volume!"><i class='fa fa-volume-up'> 8</i><span id = "vol">Volume</span></li>
+        <li class="cp" id = "colorpick" title = "Edit the color of the particles in the Main Menu!"><i class="fa fa-spinner"></i><span id = "cp">colorpicker</span></li>
+        <li class="user span2" title = "Change the versus mode!"><i class="fa fa-user"></i><span id = "u">user</span></li>
+        <li class="photos" title = "use your favorite image rather than the ball while playing!"><i class="fa fa-camera"></i><span id = "ph">photos</span></li>
+        <li class = "controls" title = "view the controls of the game!"><i class = "fa fa-gamepad"></i><span id = "cntrls">Controls</span></li>
+        <li class = "help" title = "Various explanations needed to play the game!"><i class = "fa fa-question-circle"></i><span id = "hlp">Help</span></li>
+    </ul>  
+         
+<input type = "text" name = "photo-name" placeholder = "src" title = "photo link" id = "photo-link"/>
+    <input type = "submit" title = "Note: Once submit is clicked, the image should be displayed on the screen, if it doesn't appear, then the image does not have a valid link" text = "submit" name = "submit-photo" />
+     
+<input type = "number" value = "10" type = "text" min = "1" id = "points" title = "Select the number of points in Versus mode before a victory!"/>
+<input type = "submit" text = "submit" id = "submit"/>
+
+<audio loop id = "play-music">
+  <source src="http://www.digitpress.com/dpsoundz/mp3/dp_pacmania_fast.mp3" type = "audio/mp3">
+  Your browser does not support the audio element.
+</audio>    
+<audio id = "main-menu-music" loop>
+    <source src = "http://www.digitpress.com/dpsoundz/mp3/dp_panicbomber_theme.mp3" type = "audio/mp3">
+</audio> 
+<audio id = "victory-music" >
+    <source src = "http://www.digitpress.com/dpsoundz/mp3/dp_discsoftron.mp3" type = "audio/mp3">
+</audio>   
+<audio id = "game-over-music" >
+    <source src = "http://www.digitpress.com/dpsoundz/mp3/dp_timepilot.mp3" type = "audio/mp3">  
+</audio> 
+
+<h1 id = "first-control-explanation">Player 1 in any multiple player mode:</h1>
+<h1 id = "second-control">Everything else:</h1>
+ 
+<ul id = "controls">
+   <li class = "w"><i>W</i><span>Up</span></li>
+   <li class = "a"><i>A</i><span>Left</span></li>
+   <li class = "s"><i>S</i><span>Down</span></li>
+   <li class = "d"><i>D</i><span>Right</span></li>
+</ul> 
+<ul id = "second-controls">
+    <li class = "up"><i class = "fa fa-arrow-up"></i><span>Up</span></li>
+   <li class = "left"><i class = "fa fa-arrow-left"></i><span>Left</span></li>
+   <li class = "down"><i class = "fa fa-arrow-down"></i><span>Down</span></li> 
+   <li class = "right"><i class = "fa fa-arrow-right"></i><span>Right</span></li>
+</ul>
+</body>
+</html>
