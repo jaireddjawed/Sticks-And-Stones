@@ -1,81 +1,45 @@
-*{
-    font-family:  "Raleway", sans-serif;
+body{
+  background: #1a2125;
+  font-family: "Raleway", sans-serif;  
+  position: absolute;
+  text-shadow: 2px 2px 2px darkblue; 
 }
 #canvas, #first-screen {
     border: 2px solid gray;
     border-radius:50px; 
     background: url("http://bit.ly/UpQgJ6");
+    -webkit-filter:grayscale(10%);
+    color: white;
 }
-#first-screen{
-  width:900px;
-  height:700px;
-}
-#title { 
-    color: #7FFFD4; 
+h1{
+  color: #7FFFD4; 
+} 
+#title{
     position:absolute;
-    top: 100px;
-    left: 40px;
-    font-size:40px;
-    text-shadow: 2px 2px 2px darkblue; 
+    margin-top:-525px;
+    margin-left:30px; 
+    font-size:40px;    
+    background: none;
 }
 #subtitle{
     color:#39FF14;  
-    font-size:30px;
-    left:40px;
-    top: 130px;
+    font-size:30px;  
+    margin-left:30px;
+    margin-top:-490px;
     text-shadow: 2px 2px 2px darkblue;
     position:absolute; 
 }  
-h1, h2{  
-  color:white; 
-  margin-left:175px;
-  position:absolute;
-  background:url(""); 
-  text-shadow: 5px 5px 5px darkblue;
-}
-#main, #opt{ 
-    color:#7FFFD4;
-    width: 200px;
-    height:45px;
-    background:url("");
-    text-shadow:2px 2px 2px darkblue;
-    position:absolute;
-    margin-left:50px;
-}
-#playSingle{
-  margin-top: 150px;
-}
-#singlePlayer, #multiPlayer, #versus, #op{
-  margin-top:-175px;
-  cursor:pointer;
-}
-#playMulti{
-  margin-top:275px;
-}
-#multiPlayer{
-  margin-top:300px;
-}
-#playVersus{
-  margin-top:400px;
-} 
-#versus{ 
-  margin-top:425px;
-}
-#options{
-  margin-top:525px;
-}
-#op{  
-  margin-top:550px;
-}
-.menu{ 
-    background-color:rgba(100, 300, 220, .5);   
-    border-radius:45px; 
+.menu{
+   background-color:rgba(100, 300, 220, .5);   
+    border-radius:45px;  
     width:600px;
     height:100px;
     box-shadow: 5px 5px 5px black;
     position:absolute;
-    margin-left: 150px;
-    opacity: 0.9; 
+    opacity: 0.9;
+    position: relative;
+    margin:40px auto; 
+    margin-left: 200px;
 }
 .highlighted{
   background:rgba(100,300,260,.5);
@@ -85,108 +49,20 @@ h1, h2{
   box-shadow: 2px 2px 8px darkblue;
   cursor:pointer;
 } 
-#back{
-  text-align:center;
-  background:rgba(100,300,220,.5);
-  width:150px;
-  height:40px;
-  border-radius:45px;
-  position:absolute;
-  margin-top:-695px;
-  margin-left:730px; 
-  font-size:35px;
-  text-shadow: 2px 2px 2px darkblue;
+.menu h1{     
+  position:relative;
+  margin-left:20px; 
+  padding: 15px;
 }
-.color{
-  color:rgba(200,100,255,.5);
-  background:rgba(155,160,175,.5);
-  box-shadow: 5px 5px 5px black;
-}
-#volume{
-  margin-top:-300px;
-  margin-left:230px;
-  background-color:rgba(100, 300, 220, .5);
-  margin-top:-600px;
-  position:absolute;
-  width: 400px;
-}
-#slider, #slider2{
-  width:300px;
-  position:absolute;
-  margin-top:-390px;
-  margin-left:265px;
-  box-shadow: 2px 2px 2px darkblue;
-  width: 400px;
-} 
-#slider2{
-  margin-top:-360px;
-}
-#red, #green, #blue {
-    clear: left;
-    width: 300px;
-    box-shadow: 2px 2px 2px darkblue;
-    position:absolute;
-    margin-left:200px;
-}
-#red{
-  margin-top:-400px;
-}
-#green{
-  margin-top:-375px;
-}
-#blue{
-  margin-top:-350px;
-}
-#swatch {
-    width: 120px;
-    height: 100px; 
-    position:absolute;
-    margin-top:-425px;
-    margin-left:550px;
-    background-image:none;
-}
-#dd{
-  color: white;
-  width:200px;
-  height:30px;
-  font-size:20px;
-}
-#opt{
-  position: absolute;
-  margin-top:-675px;
-}
-span{
-  color:white;
-  background: none;
-  margin-top:-400px;
-  position: absolute;
-  margin-left:260px;
-}
-#c{
-    margin-left:385px;
-}
-#human-player{
-    position:absolute;
-    margin-top:-400px; 
-    margin-left:245px;
-}
-#cpu{
-    position:absolute;
-    margin-top:-400px;
-    margin-left:370px;
-}
-#colorpicker{
-    position:absolute;
-    margin-top:-500px;
-    margin-left:300px;
-}
-.ui-tooltip, .arrow:after {
+  .ui-tooltip, .arrow:after {
+    background: black;
     border: 2px solid white;
   }
   .ui-tooltip {
     padding: 10px 20px;
+    color: white;
     border-radius: 20px;
-    font: bold 14px "Helvetica Neue", Sans-Serif;
+    font: bold 14px "raleway", Sans-Serif;
     text-transform: uppercase;
     box-shadow: 0 0 7px black;
   }
@@ -215,16 +91,93 @@ span{
     height: 25px;
     box-shadow: 6px 5px 9px -9px black;
     -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    tranform: rotate(45deg);
+    transform: rotate(45deg);
   }
   .arrow.top:after {
     bottom: -20px;
     top: auto;
   }
-  .afterscreen{
+.options-highlighted{
+  color:white;
+}
+#wasd div, #up-down-left-right div{
+  display:inline-block;
+}
+#controls-list li {
+  list-style-type: none;
+}
+#bgm-volume-value, #sfx-volume-value{
+  width:300px;
+  cursor:pointer;
+}
+#main{ 
+  position:absolute;
+  margin-top:-680px;
+  margin-left: 50px;
+}
+#single-player{ 
+   margin-top: -620px;
+}
+#options-field, #controls-field{
+  width:900px;
+  height:700px;
+  color:rgba(100,100,100,.6);
+  background:gray;
+  opacity:0.7;
+  border-radius:50px;
+  margin-top:-727px;
+  margin-left:2px;
+  position:relative;
+}
+#options-menu li{
+  list-style-type: none;
+  padding:10px;  
+  font-size: 12.5px;
+}
+#swatch {
+    width: 120px;
+    height: 100px; 
+    position:absolute;
+    color: red;
+    border: 2px solid gray;
+    background-image:none;  
+    border-radius: 20px;
+    margin-left: 325px;
+    margin-top: -110px; 
+}
+#red, #blue, #green{
+  background-color:red;
+  width: 300px;
+}
+#green{
+  color:green;
+}
+#blue{
+  color: blue;
+}
+.esc{
+  text-align:center;
+  background:rgba(100, 300, 220, .5);
+  width:150px;
+  height:40px;
+  border-radius:45px;
+  font-size:35px;
+  margin: 10px auto;
+  margin-left:675px;
+  margin-top:22px;
+}
+.controls-buttons{
+  width:100px;
+  height:50px;
+  background-color:blue;
+  color: lightblue;
+  text-align:center;
+  border-radius: 20px;
+  opacity:.8;
+  font-family: "Black Ops One";
+}
+.afterscreen{
       color:white;
       width:400px;
       height:100px;
@@ -237,171 +190,25 @@ span{
       margin-top:-450px;
       margin-left:175px;
       padding:20px;
-  }
-  #replay{
+}
+#replay{
       margin-top:-300px;
-  }
-  body {
-  background:#1a2125;
-  color:aliceblue;
-  font-family:'Open Sans', sans-serif;
-  font-weight:300;
-  margin:0 auto;
-  
-  /* Click-and-drag or text-selection doesn't make sense. */
-  /* Or long-tap on webkit phones. */
-  -webkit-touch-callout:none;
-  -webkit-user-select:none;
-  -khtml-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
 }
-
-main {
-  /* Use a max-width so that we have 4 columns */
-  max-width:680px;
-  margin:auto;
-  padding:20px;
+#up-down-left-right{
+  margin-top:10px;
 }
-
-main header {
-  text-align:center;
-  margin:0 5px 36px 5px;
-  font-size:24px;
-  border:1px rgb(128, 128, 159) solid;
-  padding:8px;
-  background:rgba(128, 128, 159, 0.1);
+#back-controls-div{
+  margin-top:0px;
 }
-
-ul {
-  /* We don't need actual bullets */
-  list-style:none;
-}
-
-li {
-  float:left; /* So that they wrap */
-  height:150px;
-  width:150px;
-  margin:5px; /* The gaps between them */
-  
-  text-transform:capitalize;
-  
-  /*transition may need prefixes in some browsers */
-  -webkit-transition:.2s -webkit-transform, 1s opacity;
-  -moz-transition:   .2s -moz-transform, 1s opacity;
-  -o-transition:     .2s -o-transform, 1s opacity;
-  transition:        .2s transform, 1s opacity;
-  
-  /*transform*/
-  -webkit-transform:perspective(800px);
-  -moz-transform:perspective(800px);
-  -ms-transform:perspective(800px);
-  -o-transform:perspective(800px);
-  transform:perspective(800px);
-  
-  /*transform-style*/
-  -webkit-transform-style:preserve-3d;
-  -moz-transform-style:preserve-3d;
-  -ms-transform-style:preserve-3d;
-  -o-transform-style:preserve-3d;
-  transform-style:preserve-3d;
-  -webkit-transform-origin-x:50%;
-  -webkit-transform-origin-y:50%;
-  
-  text-align:center;
-  cursor:pointer;
-}
-/* When moused over, rotate it! */ 
-li:active {
-  /*transform*/
--webkit-transform:perspective(200px) rotate3d(1, 0, 0, 17deg);
-  -moz-transform:perspective(200px) rotate3d(1, 0, 0, 17deg);
-  -ms-transform:perspective(200px) rotate3d(1, 0, 0, 17deg);
-  -o-transform:perspective(200px) rotate3d(1, 0, 0, 17deg);
-  transform:perspective(200px) rotate3d(1, 0, 0, 17deg);
-}
-/* It'd be neat to have double-width tiles */
-.span2{
-  width:310px; 
-}
-/* Icon and number */
-li i{
-  font-size:60px;
-  margin:35px 0 0;
-}
-/* Text label on tiles */
-li span{
+#back-button{
   position:absolute;
-  bottom:8px; 
-}
-/* Specialized background colours */ 
-.volume{
-  background:rgb(27, 161, 226);
-}
-#colorpick{
-  background:rgb(240, 163, 10);
-}
-.user{
-  background:rgb(119, 158, 203);
-}
-.photos{
-  background:rgb(162, 0, 37);
-}
-#vol{
-    margin-left:20px;
-}
-#cp{
-    margin-left:40px;
-}
-#u{
-    margin-left:140px;
-}
-#ph{
-    margin-left:35px;
-}
-#options-list{
-    margin-top:-450px;
-}
-#vol-opt-list, #versus-mode{
-    margin-top:-600px;
-}
-input{
-    position:absolute;
-    margin-top:-375px;
-    margin-left:250px;
-}
-input[type='submit']{
-    margin-left:435px;
-}
-.controls, .help{
-    margin-left:-795px;
-    margin-top:175px;
-    background:rgb(0, 192, 0);
-    width:350px;
-}
-.help{
-    background:rgb(0, 80, 239);
-    margin-left:-410px;
-}
-.w, .a, .s, .d, .up, .down, .left, .right{
-    background: rgba(100,200,300,.5);
-}
-#controls{
-    position:absolute;
-    margin-top:-525px;
-}
-#second-controls{
-    position:absolute;
-    margin-top:-300px;
-}
-#controls span, #second-controls span{
-    margin-left:20px;
-}
-#first-control-explanation, #second-control{
-    margin-top:-560px;
-    margin-left:40px;
-}
-#second-control{
-    margin-top:-350px;
+  text-align:center;
+  background:rgba(100, 300, 220, .5);
+  width:150px;
+  height:40px;
+  border-radius:45px;
+  font-size:35px;
+  margin: 10px auto;
+  margin-left:735px;
+  margin-top:-700px;
 }
