@@ -10,20 +10,19 @@
   width:900px;
   height:700px;
 }
-p{ 
+#title { 
     color: #7FFFD4; 
     position:absolute;
-    margin-top:-525px;
-    margin-left:30px;     
-    font-size:40px;  
-    background: url("");
+    top: 600px;
+    left: 40px;
+    font-size:40px;
     text-shadow: 2px 2px 2px darkblue; 
 }
 #subtitle{
     color:#39FF14;  
     font-size:30px;
-    margin-left:30px;
-    margin-top:-485px;
+    left:30px;
+    top: 485px;
     text-shadow: 2px 2px 2px darkblue;
     position:absolute; 
 }  
