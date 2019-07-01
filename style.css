@@ -13,7 +13,7 @@
 #title { 
     color: #7FFFD4; 
     position:absolute;
-    top: 600px;
+    top: 100px;
     left: 40px;
     font-size:40px;
     text-shadow: 2px 2px 2px darkblue; 
@@ -21,8 +21,8 @@
 #subtitle{
     color:#39FF14;  
     font-size:30px;
-    left:30px;
-    top: 485px;
+    left:40px;
+    top: 130px;
     text-shadow: 2px 2px 2px darkblue;
     position:absolute; 
 }  
